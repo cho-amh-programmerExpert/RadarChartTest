@@ -45,7 +45,7 @@ def create_radar_chart(categories, values_list, labels, title='Radar Chart'):
         ax.fill(angles, values, color=color, alpha=0.25)
     
     # Title
-    plt.title(title, size=20, color='blue', y=1.1)
+    plt.title(title, size=20, color='lightblue', y=1.1)
     
     # Add legend
     plt.legend(loc='upper right', bbox_to_anchor=(0.1, 0.1))
@@ -53,7 +53,7 @@ def create_radar_chart(categories, values_list, labels, title='Radar Chart'):
     # Add spacing between the labels and the chart
     for label, angle in zip(ax.get_xticklabels(), angles):
         x, y = label.get_position()
-        label.set_position((x, y - 0.15))  # Increase the offset by 0.15
+        label.set_position((x, y - 0.05))  # Increase the offset by 0.15
     
     st.pyplot(fig)
 
